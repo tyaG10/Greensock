@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <section>
+            <img src="bg.jpg" id="bg" />
+            <img src="bats.png" id="bats" />
+            <img src="castle.png" id="castle" />
+            <img src="img.png" id="img" />
+            <img src="wolf.png" id="wolf" />
+        </section>
+        <div class="sec">
+            <div class="content">
+                <h2>Happy Halloween</h2>
+                <p>Halloween est une fête populaire célébrée chaque année le 31 octobre. Elle trouve ses origines dans les anciennes traditions celtiques et a évolué au fil du temps pour devenir une fête moderne avec des éléments de folklore, de déguisements, de bonbons et de divertissements.
+
+À l'origine, Halloween était connu sous le nom de "Samhain" dans la culture celtique. C'était une fête marquant la fin de l'été et le début de la saison sombre de l'année. Les anciens Celtes croyaient que pendant la nuit de Samhain, le voile entre le monde des vivants et celui des esprits se mince, permettant aux esprits et aux âmes des défunts de revenir sur terre.
+
+Avec l'expansion du christianisme, Samhain a été assimilé à la fête chrétienne de la Toussaint, qui est célébrée le 1er novembre pour honorer tous les saints. La veille de la Toussaint, le 31 octobre, a été appelée "All Hallows' Eve" (la veille de tous les saints), qui a évolué pour devenir le terme "Halloween" que nous connaissons aujourd'hui.
+
+La célébration d'Halloween comprend diverses traditions et activités. Les gens se déguisent en costumes effrayants tels que des sorcières, des vampires, des fantômes ou des monstres, et vont de maison en maison pour demander des bonbons en disant "Des bonbons ou un sort !" (trick-or-treat en anglais). Les maisons sont souvent décorées avec des citrouilles sculptées, des fantômes, des toiles d'araignée et d'autres décorations thématiques.
+
+Les fêtes d'Halloween peuvent également inclure des jeux et des activités comme des défilés de costumes, des concours de citrouilles sculptées, des maisons hantées et des projections de films d'horreur. C'est une fête appréciée par les enfants et les adultes qui se prêtent volontiers à l'atmosphère fantasmagorique et amusante de cette période de l'année.
+
+Il convient de noter que les traditions et les célébrations peuvent varier d'un pays à l'autre, mais Halloween est généralement associé à une ambiance effrayante, festive et ludique, où l'on s'amuse à se faire peur de manière amusante.</p>
+            </div>
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        
+        <script>
+            gsap.to("#img", {
+                scrollTrigger: {
+                    scrub: 0.5,
+                },
+                x: 1500,
+                y: 500
+            })
+            
+            gsap.from("#wolf", {
+                scrollTrigger: {
+                    scrub: 0.5,
+                },
+                x: 400,
+            })
+            
+            gsap.from("#castle", {
+                scrollTrigger: {
+                    scrub: 0.5,
+                },
+                x: -100,
+            })
+            
+            gsap.to("#bats", {
+                scrollTrigger: {
+                    scrub: 0.5,
+                },
+                scale: 1.5,
+            })
+        </script>
+    </body>
+</html>

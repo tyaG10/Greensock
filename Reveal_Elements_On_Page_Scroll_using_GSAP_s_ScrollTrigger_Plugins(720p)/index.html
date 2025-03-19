@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <section>
+            <div>
+                <h2 class="reveal">Content Reveal on Page Scroll</h2>
+                <h2 class="reveal">ScrollTrigger is Awesome</h2>
+                <img src="user.jpg" />
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2 class="reveal">Content Reveal on Page Scroll</h2>
+                <h2 class="reveal">ScrollTrigger is Awesome</h2>
+                <img src="user1.jpg" />
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2 class="reveal">Content Reveal on Page Scroll</h2>
+                <h2 class="reveal">ScrollTrigger is Awesome</h2>
+                <img src="user2.jpg" />
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2 class="reveal">Content Reveal on Page Scroll</h2>
+                <h2 class="reveal">ScrollTrigger is Awesome</h2>
+                <img src="user3.jpg" />
+            </div>
+        </section>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js" integrity="sha512-FmrxaqOldbQJq7ruBRLrIzxYZxDJLH2GBKvJqJz8Jf7WKEgDkvAkfta6JeInBYExpr+R0aw8niow9OiunjDigQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js" integrity="sha512-q78wmbujQasOqTRW68xNd9Wwmd1l1SLnxPLuwyJVwTg7EC0rXGUn+KAxGvnZcpKaDMRW0CfxBVk0JNG3UdzYGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script type="text/javascript">
+            const reveal = gsap.utils.toArray('.reveal');
+            reveal.forEach((text, i) => {
+                ScrollTrigger.create({
+                    trigger: text,
+                    toggleClass: 'active',
+                    start: "top 90%",
+                    end: "top 20%",
+                    //markers: true
+                })
+            })
+            const image = gsap.utils.toArray('img');
+            image.forEach((img, i) => {
+                ScrollTrigger.create({
+                    trigger: img,
+                    toggleClass: 'active',
+                    start: "top 90%",
+                    end: "top 20%",
+                    //markers: true
+                })
+            })
+        </script>
+    </body>
+</html>

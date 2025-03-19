@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <section>
+            <img src="bg.jpg" id="bg" />
+            <h2 id="text">Mountains</h2>
+            <img src="man.png" id="man" />
+            <img src="clouds_1.png" id="clouds_1" />
+            <img src="clouds_2.png" id="clouds_2" />
+            <img src="mountain_left.png" id="mountain_left" />
+            <img src="mountain_right.png" id="mountain_right" />
+        </section>
+        
+        <div class="sec">
+            <h2>ScrollTrigger is Awesome</h2>
+            <p>ScrollTrigger est une bibliothèque JavaScript incroyable qui permet de créer des animations dynamiques et interactives basées sur le défilement de la page. Elle est développée par GreenSock, une société spécialisée dans les animations web.
+
+            Cette bibliothèque est très appréciée par les développeurs web pour sa facilité d'utilisation, sa flexibilité et sa puissance. Elle offre une large gamme de fonctionnalités qui permettent de créer des effets de défilement personnalisés et engageants.
+
+            L'une des caractéristiques principales de ScrollTrigger est sa capacité à déclencher des animations à des positions de défilement spécifiques. Cela signifie que vous pouvez contrôler précisément quand et comment vos animations seront déclenchées, offrant ainsi une expérience utilisateur plus immersive et interactive.
+
+            Avec ScrollTrigger, vous pouvez animer différents éléments de votre page, tels que des images, des textes, des graphiques, des vidéos et bien plus encore. Vous pouvez définir des animations de transition fluides, des mouvements parallaxe, des défilements infinis et bien d'autres effets créatifs.
+
+            Une autre fonctionnalité puissante de ScrollTrigger est la possibilité d'ajouter des déclencheurs multiples à un même élément. Cela signifie que vous pouvez combiner différents déclencheurs, tels que le défilement, le temps et les interactions de l'utilisateur, pour créer des animations complexes et interactives.
+
+            ScrollTrigger offre également des options de personnalisation avancées, avec des paramètres tels que la vitesse d'animation, l'échelle, l'opacité et bien d'autres encore. Vous pouvez ajuster ces paramètres pour obtenir les effets désirés et créer des expériences uniques et captivantes pour vos utilisateurs.
+
+            En résumé, ScrollTrigger est une bibliothèque JavaScript exceptionnelle qui permet de créer des animations basées sur le défilement de la page. Avec ses fonctionnalités puissantes, sa facilité d'utilisation et sa flexibilité, elle offre aux développeurs web un moyen efficace et créatif de rendre leurs sites web plus dynamiques et engageants. Que ce soit pour des sites web d'entreprises, des portfolios ou des projets créatifs, ScrollTrigger est un outil essentiel pour améliorer l'expérience utilisateur et donner vie à vos idées.</p>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        
+        <script>
+            gsap.to("#bg", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                scale: 1.5
+            });
+            gsap.to("#man", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                scale: 0.5
+            });
+            gsap.to("#mountain_left", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: -500,
+            });
+            gsap.to("#mountain_right", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: 500,
+            });
+            gsap.to("#clouds_1", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: 200,
+            });
+            gsap.to("#clouds_2", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                x: -200,
+            });
+            gsap.to("#text", {
+                scrollTrigger: {
+                    scrub: 1
+                },
+                y: 500,
+            });
+        </script>
+    </body>
+</html>

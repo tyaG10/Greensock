@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <img src="etoile.png" class="etoile" />
+            </div>
+        </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script>
+            for(let i=1; i<=200; i++){
+                let bars = document.createElement('span');
+                document.querySelector('.container').appendChild(bars);
+            }
+            
+            gsap.from(".container span", {
+                transform: "translateZ(1000px)",
+                zIndex: 100,
+                delay: 1,
+                stagger: {
+                    from: "random",
+                    amount: 10
+                }
+            });
+            
+            gsap.from('.etoile', 0.5,{
+                opacity: 0,
+                delay: 11.5
+            })
+        
+        </script>
+    </body>
+</html>
